@@ -1,0 +1,40 @@
+/* Levi McCann
+-- 11/18/2019
+-- CIS 23
+-- Assignment 4 Question 1 */
+
+-- Note the BusinessEntityID that is returned from this query. This 
+-- number is the BusinessEntityID that you will need in the next step:
+
+ 
+
+-- 1. Create an INSERT statement to add a new row to the Person.Person
+-- table in the AdventureWorks2017 database. Insert your own name 
+-- and information into the database. Make up any other information that
+-- is needed for adding a new person to this table. (It is helpful to
+-- run an SELECT statement to see what the current data looks like in
+-- the table.) If a column accepts NULL then feel free to add NULL 
+-- in your new row for some of these columns. (For a “guid” field you can
+-- use the “NEWID()” function to generate the value for this column.
+-- For the current date and time you can use the “GETDATE()” function 
+-- to generate the value for this column.) For the BusineesEntityID you
+-- need to use the BusinessEntityID that was returned from the first
+-- step where you inserted a new record into the Person.BusinessEntity
+-- (local table.
+
+-- /* *SOLUTION FOR QUESTION 1  */
+USE [AdventureWorks2017]
+
+GO
+
+--To See the Layout of the Table use the SELECT Below before inserting can take out the comment if needed
+--SELECT * FROM Person.Person
+
+INSERT INTO Person.Person
+ VALUES (21778, 'IN', 0, NULL,
+         'Levi', 'Jon', 'McCann',
+	  NULL, 2, ' ', NULL,  NEWID(), GETDATE())
+
+--To See the Record that was inserted Look for BusinessEntityID = 21778
+SELECT * FROM Person.Person
+GO
