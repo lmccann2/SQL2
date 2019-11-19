@@ -1,0 +1,51 @@
+/* LEVI McCann
+   CIS 23
+   11/11/2019
+   SQL  */
+
+/* T-SQL INSERT UPDATE DELETE CREATE DROP */
+
+--You MUST submit your work to our Canvas website by the due date. Late assignments are NOT accepted after the due date. You may turn in your assignment as early as you would like.
+
+--Each question is worth 4 points.
+
+--LEVI McCann
+--CIS 23
+--11/11/2019
+--SQL
+
+/* T-SQL INSERT UPDATE DELETE CREATE DROP
+
+--You MUST submit your work to our Canvas website by the due date. Late assignments are NOT accepted after the due date. You may turn in your assignment as early as you would like.
+
+--Each question is worth 4 points.
+
+--You need to have the AdventureWorks2012 database to create these queries.
+-- 1.   First run this query that will insert a new record into the
+--  Person.BusinessEntity table:     */
+
+
+
+USE [AdventureWorks2017]
+
+GO
+
+ 
+
+INSERT INTO [Person].[BusinessEntity]
+
+           ([rowguid]
+
+           ,[ModifiedDate])
+
+     VALUES
+
+           (
+
+            NEWID()
+
+           ,GETDATE()
+
+           )
+           
+      
