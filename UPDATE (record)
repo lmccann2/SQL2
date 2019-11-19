@@ -1,0 +1,35 @@
+/* Levi McCann
+--11/18/2019
+-- CIS23
+-- Assignment 4 Question 2 */
+
+
+--   2. Create an UPDATE statement to update the new row that you just inserted
+-- into the Person.Person table. Update the Title column
+-- to give yourself the title of “Dr.”. Be sure to
+-- update the ModifiedDate column to the current date and
+-- time that you updated this row.
+
+USE AdventureWorks2017;
+GO
+
+/*Update the Title First, the ID, Then, DATE */
+
+UPDATE Person.Person
+SET Title ='Dr'
+WHERE BusinessEntityID = 21778
+GO
+--GET NEWID()
+UPDATE Person.Person
+SET [rowguid] = NEWID()
+WHERE BusinessEntityID = 21778
+GO
+
+--UPDATE DATE TO CURRENT DATE/TIME
+UPDATE Person.Person
+SET[ModifiedDate] = GETDATE()
+WHERE BusinessEntityID = 21778
+
+GO
+SELECT * FROM Person.Person
+GO
