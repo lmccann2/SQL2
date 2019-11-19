@@ -1,0 +1,23 @@
+/* Levi McCann
+-- 11/18/2019
+-- CIS 23
+-- Assignment 4 Question 4 */
+
+/* --   4. Create a TSQL statement that will create a new database table
+-- in the AdventureWorks2017 database. Create 3 columns in this
+-- new “Person.PersonCallList” table, “BusinessEntityID” type int,
+-- do not allow null, primary key column, “DoNotCall” type bit,
+-- allow null and “LastCalled” type datetime allow NULL.
+*/
+ 
+
+ USE AdventureWorks2017;
+GO
+
+CREATE TABLE Person.PersonCallList(BusinessEntityID int not null primary key,
+				DoNotCall bit null, LastCalled datetime null)
+
+/* Creates Table in AventureWorks2017 database. Table can be seen after refreshed */
+
+
+
