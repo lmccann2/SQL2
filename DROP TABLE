@@ -1,0 +1,15 @@
+/* Levi McCann
+-- 11/18/2019
+-- CIS 23
+-- Assignment 4 Question 5 */
+
+/* --   5. Create a TSQL statement that will delete the new database table that you just created in the last question.
+-- The table should be called “Person.PersonCallList”. */
+
+ 
+USE AdventureWorks2017;
+GO
+
+DROP TABLE [Person].[PersonCallList];
+GO
+ 
