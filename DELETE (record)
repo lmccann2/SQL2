@@ -1,0 +1,23 @@
+/* Levi McCann
+-- 11/18/2019
+-- CIS 23
+-- Assignment 4 Question 3 */
+
+--   3. Create a DELETE statement to delete the record you just
+-- inserted and updated. After you delete that record you need to 
+--create a second DELETE statement to delete the row you added to
+-- the Person.BusinessEntity table.
+
+ USE AdventureWorks2017;
+GO
+
+--Delete Record from Person.Person Table
+DELETE FROM Person.Person
+WHERE BusinessEntityID = 21778
+GO
+
+
+--Delete From Person.BusinessEntity
+DELETE FROM Person.BusinessEntity
+WHERE BusinessEntityID = 21778
+GO
